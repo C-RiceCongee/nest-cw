@@ -1,0 +1,12 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  nest_mysql_db:
+    image: mysql
+    restart: always
+    ports:
+      - "19999:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
