@@ -10,10 +10,10 @@ const envPath = join(
   `config.${process.env.NODE_ENV || 'development'}.yaml`,
 );
 // commonConfig 公共配置文件
-const commonConfig = yaml.load(readFileSync(commonPath))
+const commonConfig = yaml.load(readFileSync(commonPath));
 
 // envConfig 加载多环境配置文件
-const envConfig = yaml.load(readFileSync(envPath))
+const envConfig = yaml.load(readFileSync(envPath));
 const loadCommon = () => commonConfig;
 const loadEnv = () => envConfig;
 export default [loadCommon, loadEnv];

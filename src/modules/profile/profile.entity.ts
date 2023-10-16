@@ -1,14 +1,21 @@
-import {BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryColumn} from "typeorm";
-import {UserEntity} from "../user/user.entity";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryColumn,
+} from 'typeorm';
+import { UserEntity } from '../user/user.entity';
 
-@Entity("profile")
+@Entity('profile')
 export class ProfileEntity {
-    @PrimaryColumn()
-    id: number
+  @PrimaryColumn()
+  id: number;
 
-    @Column()
-    avatar: string
+  @Column()
+  avatar: string;
 
-    @Column()
-    phone: string
+  @Column()
+  phone: string;
 }

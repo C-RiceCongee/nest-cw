@@ -10,3 +10,8 @@ services:
       - "19999:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 123456
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
