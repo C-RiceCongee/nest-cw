@@ -14,6 +14,9 @@ import { FilesEntity } from './modules/files/files.entity';
 import { PostsModule } from './modules/posts/posts.module';
 import { TagsModule } from './modules/tags/tags.module';
 import { PostsEntity } from './modules/posts/posts.entity';
+import { TagsEntity } from './modules/tags/tags.Entity';
+import { CategoriesModule } from './modules/categories/categories.module';
+import { CategoriesEntity } from './modules/categories/categories.entity';
 
 @Module({
   imports: [
@@ -31,7 +34,14 @@ import { PostsEntity } from './modules/posts/posts.entity';
         username: cs.get(ENUM_Config_DB.Username),
         password: cs.get(ENUM_Config_DB.Password),
         database: cs.get(ENUM_Config_DB.Database),
-        entities: [UserEntity, ProfileEntity, FilesEntity, PostsEntity],
+        entities: [
+          UserEntity,
+          ProfileEntity,
+          FilesEntity,
+          PostsEntity,
+          TagsEntity,
+          CategoriesEntity,
+        ],
         synchronize: true,
         autoLoadEntities: true,
       }),
@@ -41,6 +51,7 @@ import { PostsEntity } from './modules/posts/posts.entity';
     FilesModule,
     PostsModule,
     TagsModule,
+    CategoriesModule,
   ],
 })
 export class AppModule {}
